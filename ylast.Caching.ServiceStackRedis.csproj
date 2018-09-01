@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>ylast.Caching.ServiceStackRedis</PackageId>
+        <Title>Redis Sentinel IDistributedCache implementation with Service Stack Redis.</Title>
+        <Description>Distributed cache implementation of Microsoft.Extensions.Caching.Distributed.IDistributedCache using ServiceStack.Redis.Core</Description>
+        <PackageTags>cache;distributedcache;redis;sentinel</PackageTags>
+        <VersionPrefixSuffix>0</VersionPrefixSuffix>
+        <VersionPrefixSuffix Condition="'$(BuildNumber)'!=''">$(BuildNumber)</VersionPrefixSuffix>
+        <VersionPrefix>1.0.$(BuildNumber)</VersionPrefix>
+
+        <Authors>YatLun Wong</Authors>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/awyl/ylast.Caching.ServiceStackRedis</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/awyl/ylast.Caching.ServiceStackRedis</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/awyl/ylast.Caching.ServiceStackRedis/blob/master/LICENSE</PackageLicenseUrl>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <DebugType>embedded</DebugType>
+        <EmbedAllSources>true</EmbedAllSources>
+        <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+        <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+        <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+        <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ServiceStack.Redis.Core" Version="5.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="2.1.1" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.1.2" />
+    </ItemGroup>
+</Project>
