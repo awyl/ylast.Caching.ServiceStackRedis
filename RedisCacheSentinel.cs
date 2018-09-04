@@ -161,7 +161,6 @@ namespace ylast.Caching.ServiceStackRedis {
                             RedisManagerFactory = (master, slaves) => new RedisManagerPool(master),
                             // set the client connection string
                             HostFilter = host => {
-                                host = "localhost";
                                 var h = String.Empty;
                                 h += String.IsNullOrWhiteSpace(_options.AuthPass) ? "" : $"{_options.AuthPass}@";
                                 h += $"{host}?db=1&RetryTimeout=5000";
@@ -195,7 +194,6 @@ namespace ylast.Caching.ServiceStackRedis {
                             RedisManagerFactory = (master, slaves) => new RedisManagerPool(master),
                             // set the client connection string
                             HostFilter = host => {
-                                host = "localhost";
                                 var h = String.Empty;
                                 h += String.IsNullOrWhiteSpace(_options.AuthPass) ? "" : $"{_options.AuthPass}@";
                                 h += $"{host}?db=1&RetryTimeout=5000";
